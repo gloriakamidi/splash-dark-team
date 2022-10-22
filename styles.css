@@ -3,38 +3,58 @@ body {
     font-family: "Bodoni Moda";
    
 }
-header{
+header {
   width: 100%;
   min-height: 400px;
   padding-top: 3em;
 
 }
+header h2 {
+    text-align: center;
+    color: white;
+    margin-top: 120px;
+    font-size: 44pt;
+}
 #swimlessons header {
    background: no-repeat lightblue url(images/which-lesson-is-best.jpeg);
-   background-size: 1500px;
+   background-size: cover;
+   background-position: center center; 
 } 
 #swimprograms header {
     background: no-repeat lightblue url(images/summer-swim-camps.jpeg);
-    background-size: 1500px;   
+    background-size: cover;
+    background-position: center center; 
 }
 
-main .swimlessons {
+main #swimlessons {
     font-family: Open, Sans, Regular;
 }
-#swim h1 {
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 48px;
 
-}
 #swim h2 {
     color: white;
     text-align: center;
 }
+#swim h4 {
+    text-align: center;
+    font-weight: bold;
+    /*color: white;*/
+    font-size: 38px;
+    line-height: 2.5;
+    margin-top: -45px;
+    
+}
+h4#swimlessons{
+    line-height: 4.8;
+    margin-top: ;
+    font-size: 28px;
+}
 h5{
     font-family: Bodoni Moda 72pt;
     font-weight: bold;
+}
+p#stroke{
+    margin: 0;
+    
 }
 
 a:link {
@@ -47,41 +67,167 @@ ul.no-bullets{
     padding: 0;
 }
 /* ------ Navbar ------- */
+nav {
+   position: relative;
+}
+
 #nav-bar {
-    background-color: rgba(26, 46, 56, 0.9);
-    padding-bottom: 0; 
-    font-size: 14px;   
+   background-color: rgba(26, 46, 56, 0.9);
+   /* padding-bottom: 0;
+   padding-top: 20px;  */
+   font-size: 14px;   
 }
 
 #navbarContent {
-    margin-bottom: 25px;
-    justify-content: space-around;
+   /* margin-bottom: 25px; */
+   justify-content: space-around;
 }
 
 #navbarContent .navbar-nav .nav-item .nav-link {
-    color: white;
-    font-weight: 500;
-    padding: 10px;
+   color: white;
+   font-weight: 500;
+   padding: 10px;
+}
+/*Toggle this when nav is active*/
+.dropdown {
+   position: initial;
+}
+
+.dropdown-menu {
+   width: 90%;
+   margin: auto;
+   top: 60%;
+   left: 5%;
+   border: none;
+}
+
+.highlight {
+   background-color: white;
+   color: black !important;
+  /* height: 3em; */
 }
 
 #navbarContent #register-btn {
     color:#03B1F4; 
     font-weight: 700;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Change the color in the stroke property of the hamburger menu */
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,165,0)' stroke-width='2' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     cursor: pointer;
+} 
+/* -------------------- Locations Grid List -------------------- */
+#locations-list {
+   /* font-family: 'Open Sans', sans-serif; */
+   padding: 10px;
+}
+#locations-list ul li {
+   font-size: 14px;
+   font-weight: 500;
+   padding: 2px 0;     
+}
+#locations-list ul li a {
+   color: #03B1F4;   
 }
 
-/* To expand the button to full width in hamburger menu mode*/
-@media all and (max-width:1199px) {
-    .custom-class { 
-        width: 95%; 
-        display:block;
-        margin: 0 auto; 
+ /* -------------------- Signin page -------------------- */
+ #signin #signin-card {
+   width: 50%;
+ }
+
+ #signin #signin-card h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    color: #444;
+ }
+ 
+ #signin .form-group label {
+    color: red;
+    margin-bottom: 0;
+ }
+
+ #signin #shark-img {
+   width: 150px;
+   height: auto;
+   top: -35px;
+   left:-83px;
+ }
+
+ #signin input {
+    background-color:#e4eaea;
+    color: #FFF;
+ }
+
+ #signin #forgot-pw{
+    text-decoration: underline;
+ }
+
+ #signin #forgot-pw a {
+    color: #03B1F4;
+ }
+
+ #signin #btn-group button {
+    font-weight: 500;
+ }
+
+ #signin #signin-btn {
+    background-color: rgba(3, 177, 244, 0.5);
+    color: white;
+ }
+
+ #signin #signup-btn {
+    border: 2px solid #03B1F4;
+    color: #03B1F4;
+    background-color: #f8f8f8;
+ } 
+ @media all and (max-width:768px) {
+    #signin-card {
+      width: 80% !important;
     }
+
+    #signin #btn-group #signin-btn {
+      margin-bottom: 10px;
+    }
+ }
+
+@media all and (max-width:1199px) {
+   .custom-class { /* To expand the button to full width in hamburger menu mode */
+      width: 95%; 
+      display:block;
+      margin: 0 auto; 
+   }
+   .dropdown-menu {
+      width: 100%;
+      padding: 0;
+      border-radius: 0;
+   }
+   #locations-list  {
+      padding-top: 10px !important;
+   }
+   #locations-list div h6 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 12px !important;
+   }
+   #locations-list .row .col-sm-6 {
+      margin-bottom: 12px !important;
+   }
+}
+
+@media all and (max-width:1199px) {
+   .col-filler {
+      /* display: none !important; */
+   }
+   #locations-list {
+      /* display: grid; */
+      /* grid-gap: 100px; */
+      /* grid-template-columns: repeat(auto-fill, 600px); */
+      /* flex-wrap: wrap; */
+      /* flex-flow: wrap; */
+      
+      /* flex-flow: row wrap;; */
+   }
 }
